@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Meal Planner</title>
+    <link rel = "icon" href = 
+    "/images/Meal Planner-3.png" 
+            type = "image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+    
+</head>
+
+
+
+<body>
+
+
+  <section class="section1">
+    <img src="images/homepage.png" class="home">
+    <div class="hero">
+        <a href="#" class="scroll-down">
+        <div class="mouse">
+            <span></span>
+        </div>
+        <div class="arrow">
+            <span></span>
+        </div>
+        </a>
+    </div>
+    <div class="container">
+        <div class="navbar">
+
+         
+          <img src="/images/Meal Planner-5.png" width="120px" height="120px" alt="">
+            <h1 class="logo">Meal Planner</h1>
+
+            
+        </div>
+     
+        <div class="row">
+            <div class="col-1">
+                
+                <h1>Don’t know what to cook next?</h1>
+                <p>Let us help you to decide the next meal for you. Taking the stress of thinking constantly what to cook next. We will plan all the cooking recipe for you that suits your needs.</p>
+            </div>
+            <div class="col-2">
+                <img src="images/dish.png" class="dish">
+            </div>
+        </div>
+
+        <button type="button" ><a href="#section2" id="button1">Plan Your Meal<img id="arrow3" src="images/arrow.png"></a></button>
+    </div>
+
+    </section>
+
+
+    <section class="container2">
+        <p class="section2title">Our Goal</p>
+  
+          <div class="grid-container">
+
+              <div class="grid-item">
+                  <img class="grid-img" id="img1" src="images/img1.jpg">
+              </div>
+
+              <div class="grid-item">
+                  <div class="grid-title" id="title1">
+                    <h1 class="title">Time Saving</h1>
+                    <h3 class="body1">It will save you a lot of time and hassle, all you need to do is enter your daily calories intake and it will give you result instantly.</h3>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="grid-container2">
+              
+
+              <div class="grid-item" >
+                  <div class="grid-title" id="title2">
+                    <h1 class="title">Making Cooking Easy</h1>
+                    <h3 class="body1">We will show you exactly how many ingredients you need and how to cook them. Make sure you nail your dinner 100% of the time.</h3>
+                  </div>
+              </div>
+
+              <div class="grid-item">
+                <img class="grid-img" id="img1" src="images/img2.jpg">
+            </div>
+
+          </div>
+
+          <div class="grid-container">
+
+            <div class="grid-item">
+              <img class="grid-img" id="img1" src="images/img3.jpg">
+            </div>
+            
+            <div class="grid-item">
+              <div class="grid-title" id="title1">
+                <h1 class="title">Finding a recipe that suits you</h1>
+                <h3 class="body1">You will be offered serval recipes choices, and if you don't like it, you can search for more. It will be easy to find a recipe that fits you.</h3>
+              </div>
+            </div>
+
+          </div>
+
+    </section>
+
+  <section id="section2"> 
+    <img src="images/bottom.png" class="bottom">
+    <h1 class="section3title">Let’s Get Planning</h1>
+      <div class="row2">
+            <div class="sec3-col-1">
+              <img src="images/dish2.png" class="dish2">
+                
+            </div>
+            <div class="sec3-col-2">
+                
+                <h1>Whats Your Target Calories? </h1>
+                <p>The goal for us is to helps you to achieve your goal more easily and efficiently, maximising the full potential of the workout.
+                <br>Our Meal Planer will help you select an ideal recipe plan that fits your style of fitness in 3 steps.  Then the system will generate a  plan based on your criteria. </p>
+
+                <form>
+                  <div id="form">
+                  <input  class="form3" type="text" id="query" placeholder="Input your calories amount" >
+                  </div>
+                  
+                  <div id="formbutton">
+                  <button class="button3" id="send-req" type="submit" onClick='window.location="#section4"'> See Your Meal </button>
+                  </div>
+              </form>
+
+
+            </div>
+        </div>
+
+  </section>
+
+  <div class="section s4" id="section4-whole" >
+          
+    <div class="columns">
+      <div class="column is-half">
+        <div class="column" id="section4">
+          
+          <div id="results"></div>
+
+
+
+
+        
+        </div>
+        
+      
+      </div>
+
+      
+    </div>
+
+
+  </div>
+
+  <footer class="footer1">
+    <p class="footerp">This website is designed by Ruitan Huang for educational Purposes.</p>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+        
+ 
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.js" integrity="sha512-eH2N2Zt2AeLuFlFvRSEeZcVeAESY+8nfIqhxx0XXEou6w/G4lLY3K8UKNYqi6e1pLXDduVF1KF/lbyxy3+X6OA==" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/lax.js" ></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+        });
+    });
+    }
+
+});
+</script>
+<script src="main.js"></script>
+
+<script src="app.js"></script>
+
+
+</body>
+</html>

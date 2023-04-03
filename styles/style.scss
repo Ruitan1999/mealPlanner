@@ -1,0 +1,21 @@
+@import './homepage';
+@import './ourgoals';
+@import './bottom';
+@import './footer';
+@mixin flexCenter {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+* {
+    scroll-behavior: smooth;
+    padding:0%;
+    margin: 0%;
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    // overflow-x: hidden !important;
+
+
+}

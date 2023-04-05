@@ -1,12 +1,4 @@
 
-// btn click
-document.querySelector('#send-req').addEventListener('click', ()=> {
-    // get query form the input #query
-    let query = document.querySelector('#query').value
-    apiRequest (query)
-
-})
-
 function apiRequest(query){
 
 fetch(`https://rapidapi.p.rapidapi.com/recipes/mealplans/generate?targetCalories=${query}&timeFrame=day`, {
@@ -33,7 +25,7 @@ fetch(`https://rapidapi.p.rapidapi.com/recipes/mealplans/generate?targetCalories
 });
 }
 
-    document.getGetElementById("query").submit() 
+document.getGetElementById("query").submit() 
 
 function renderMealDiv (meal) {
     // get result div

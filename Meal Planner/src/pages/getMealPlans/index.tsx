@@ -7,6 +7,7 @@ const index = () => {
     <div className={classes.main}>
       <div className={classes.searchSection}>
       <h1>Generate a meal plan with three meals per day (breakfast, lunch, and dinner).</h1>
+      <h3>You can utilise the search form below to customize your preferences, including time frame, target calories, diet, and exclusions.</h3>
       <Search></Search>
       </div>
     </div>

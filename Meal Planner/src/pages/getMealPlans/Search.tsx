@@ -129,7 +129,7 @@ const Search = () => {
         </FormControl>
 
         <FormControl fullWidth margin="normal">
-          <InputLabel htmlFor="exclude">Exclude</InputLabel>
+          <InputLabel htmlFor="exclude">Allergies</InputLabel>
           <Select
             id="exclude"
             name="exclude"
@@ -149,8 +149,8 @@ const Search = () => {
           </Select>
         </FormControl>
 
-        <Button type="submit" variant="contained" color="primary" sx={{width: "500px", height: "56px"}}>
-          Submit
+        <Button type="submit" variant="contained" color="primary" sx={{width: "1000px", height: "56px", fontSize: "18px", backgroundColor: "black"}}>
+          Generate Plans
         </Button>
       </form>
     </>

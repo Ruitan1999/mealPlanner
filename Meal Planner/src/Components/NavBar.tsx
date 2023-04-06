@@ -1,13 +1,19 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import classes from "./NavBar.module.css";
+import { useRouter } from "next/router";
+import Image from "next/image";
+import logo from "../assets/logo.png";
 
 const NavBar = () => {
   return (
     <Fragment>
-      <header className={classes.header1}>
+      <header className={classes.header}>
         <Link href="/">
-          <p>Meal Plan Helper</p>
+          <div className={classes.mainLogo}>
+            <Image src={logo} alt={"logo"}></Image>
+            <p>Meal Plan Helper</p>
+          </div>
         </Link>
         <nav>
           <ul className={classes.list}>
@@ -26,9 +32,16 @@ type NavItemProps = {
 };
 
 const NavItem = (props: NavItemProps) => {
+  const router = useRouter();
+
+  const style =
+    router.pathname === props.href ? classes.active : classes.inactive;
+
   return (
     <li>
-      <Link href={props.href}>{props.label}</Link>
+      <Link className={style} href={props.href}>
+        {props.label}
+      </Link>
     </li>
   );
 };

@@ -12,7 +12,7 @@ position: relative;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .writingSection h1 {
@@ -20,19 +20,22 @@ position: relative;
 }
 
 .writingSection p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    width: 50vw;
+    width: 40vw;
+    line-height: 180%;
 }
 
 
 .coverSection {
-    overflow: hidden;
+    margin-top: 10vh;
+  
+    margin-bottom: 10ch;
 }
 
 .coverSection img{
-    margin-top: -5rem;
-    width: 60vw;
+    
+    width: 100%;
     object-fit: contain;
 }
 
@@ -49,6 +52,6 @@ position: relative;
   }
   
   .curvyline path {
-    stroke: black;
-    stroke-width: 20px;
+    stroke: rgb(33, 35, 33);
+    stroke-width: 5px;
   }

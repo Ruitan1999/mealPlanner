@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Cover.module.css";
 import Image from "next/image";
-import cover from "../assets/cover.png";
+import cover from "../assets/cover2.png";
 const Cover = () => {
   return (
     <>

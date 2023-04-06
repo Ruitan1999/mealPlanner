@@ -1,14 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Nunito } from 'next/font/google'
-import About from '@/Components/About'
-import Cover from '@/Components/Cover'
-import Banner from '@/Components/Banner'
-import Goal from '@/Components/Goal'
-import MealPlanSection from '@/Components/MealPlanSection'
-import Footer from '@/Components/Footer'
+import Head from "next/head";
+import Image from "next/image";
+import { Nunito } from "next/font/google";
+import About from "@/Components/About";
+import Cover from "@/Components/Cover";
+import Banner from "@/Components/Banner";
+import Goal from "@/Components/Goal";
+import MealPlanSection from "@/Components/MealPlanSection";
+import Footer from "@/Components/Footer";
+import NavBar from "@/Components/NavBar";
 
-const nunito = Nunito({ subsets: ['latin'] })
+const nunito = Nunito({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -20,13 +21,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-      <Cover></Cover>
-      <About></About>
-      <Banner></Banner>
-      <Goal></Goal>
-      <MealPlanSection></MealPlanSection>
-      <Footer></Footer>
+        <Cover></Cover>
+        <About></About>
+        <Banner></Banner>
+        <Goal></Goal>
+        <MealPlanSection></MealPlanSection>
       </main>
     </>
-  )
+  );
 }

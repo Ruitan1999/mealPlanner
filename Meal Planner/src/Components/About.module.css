@@ -1,0 +1,19 @@
+.about {
+    background-color: white;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+}
+
+.about p{
+    font-size: 1.5rem;
+}

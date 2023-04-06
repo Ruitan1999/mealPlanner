@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "./Search";
 import classes from "./Index.module.css";
+import MealItem from "./MealItem";
 
 const index = () => {
   return (
@@ -15,6 +16,12 @@ const index = () => {
           including time frame, target calories, diet, and exclusions.
         </h4>
         <Search></Search>
+        <div className={classes.items}>
+          <MealItem></MealItem>
+          <MealItem></MealItem>
+          <MealItem></MealItem>
+          <MealItem></MealItem>
+        </div>
       </div>
     </div>
   );

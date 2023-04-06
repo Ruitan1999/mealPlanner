@@ -16,7 +16,7 @@ const MealPlanSection = () => {
         criteria, ensuring that your meals support your fitness objectives
         effectively.
       </h3>
-      <Link href="/getmeal">
+      <Link href="/getMealPlans">
         <button>Get Started Now</button>
       </Link>
     </div>

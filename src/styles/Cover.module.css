@@ -10,6 +10,8 @@
 .writingSection {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -21,7 +23,7 @@
 .writingSection p {
   font-size: 1.5rem;
   font-weight: 300;
-  width: 40vw;
+  width: 60vw;
   line-height: 180%;
   font-family: "Helvetica";
 }

@@ -2,7 +2,6 @@
   display: flex;
   align-items: baseline;
   justify-content: center;
-  height: 100vh;
 }
 
 .searchSection {
@@ -25,4 +24,11 @@
   font-weight: 500;
   font-family: Arial, Helvetica, sans-serif;
   width: 800px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 40px;
 }

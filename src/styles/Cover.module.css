@@ -1,0 +1,53 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.writingSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.writingSection h1 {
+  font-size: 5rem;
+}
+
+.writingSection p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 40vw;
+  line-height: 180%;
+  font-family: "Helvetica";
+}
+
+.coverSection {
+  margin-top: 10vh;
+
+  margin-bottom: 10ch;
+}
+
+.coverSection img {
+  object-fit: contain;
+}
+
+.curvyline {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 500px;
+  fill: none;
+  z-index: -1;
+}
+
+.curvyline path {
+  stroke: rgb(33, 35, 33);
+  stroke-width: 5px;
+}

@@ -1,0 +1,28 @@
+.main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  height: 100vh;
+}
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.searchSection h1 {
+  font-size: 50px;
+  font-weight: 700;
+  width: 1000px;
+}
+
+.searchSection h4 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 800px;
+}

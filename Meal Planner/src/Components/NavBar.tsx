@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
-import classes from "./NavBar.module.css";
+import classes from "../styles/NavBar.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import logo from "../assets/logo.png";
@@ -18,7 +18,7 @@ const NavBar = () => {
         <nav>
           <ul className={classes.list}>
             <NavItem href="/" label="Home" />
-            <NavItem href="/getmeal" label="Meal Planner" />
+            <NavItem href="/getMealPlans" label="Meal Planner" />
           </ul>
         </nav>
       </header>

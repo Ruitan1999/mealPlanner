@@ -1,18 +1,20 @@
 import Link from "next/link";
-import classes from "./MealPlanSection.module.css";
+import classes from "../styles/MealPlanSection.module.css";
 
 const MealPlanSection = () => {
   return (
     <div className={classes.section}>
-      <h1>Whats Your Target Calories? </h1>
+      <h1>What are you waiting for? Get started NOW</h1>
       <h3>
-        The goal for us is to helps you to achieve your goal more easily and
-        efficiently, maximising the full potential of the workout.
+        Our aim is to assist you in achieving your fitness goals with ease and
+        efficiency, maximizing the full potential of your workouts. With our
+        Meal Planner, you can select an ideal recipe plan that aligns with your
+        unique fitness style in just few simple steps.
       </h3>
       <h3>
-        Our Meal Planer will help you select an ideal recipe plan that fits your
-        style of fitness in 3 steps. Then the system will generate a plan based
-        on your criteria.
+        Our system will then generate a personalized plan based on your
+        criteria, ensuring that your meals support your fitness objectives
+        effectively.
       </h3>
       <Link href="/getmeal">
         <button>Get Started Now</button>

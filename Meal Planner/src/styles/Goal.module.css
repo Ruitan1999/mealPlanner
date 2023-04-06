@@ -1,0 +1,95 @@
+.goalsSection {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5rem;
+    
+}
+
+.mainTitle {
+    text-align: center;
+    font-size: 60px;
+}
+
+
+
+.goals {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+}
+
+
+
+.goal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+
+.goal1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+    gap: 5rem;
+    
+}
+
+.goal h1 {
+
+    font-style: normal;
+
+    font-size: 40px;
+    line-height: 41px;
+    /* identical to box height */
+    color: #161616;
+}
+
+.goal1 h1 {
+
+    font-style: normal;
+
+    font-size: 40px;
+    line-height: 41px;
+    /* identical to box height */
+    color: #161616;
+}
+
+
+
+.goal p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'Helvetica';
+    /* or 36px */
+    width: 500px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    margin-top: 2rem;
+    color: #161616;
+    line-height: 180%;
+
+}
+
+.goal1 p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: 'Helvetica';
+    /* or 36px */
+    width: 500px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    line-height: 180%;
+    color: #161616;
+
+}

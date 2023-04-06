@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Cover.module.css";
+import classes from "../styles/Cover.module.css";
 import Image from "next/image";
 import cover from "../assets/cover2.png";
 const Cover = () => {
@@ -9,9 +9,12 @@ const Cover = () => {
         <div className={classes.writingSection}>
           <h1>Don’t know what to cook next?</h1>
           <p>
-            Let us help you to decide the next meal for you. Taking out the
-            stree of thinking constantly what to cook next. We will plan all the
-            cooking recipe for you that suits your needs.
+            Allow us to assist you in choosing your next meal without the stress
+            of constantly thinking about what to cook. We will create a
+            personalised meal plan tailored to your preferences and needs,
+            providing you with a variety of delicious recipes to choose from.
+            Let us take care of the planning so you can enjoy the pleasure of
+            cooking without the hassle of decision-making.
           </p>
         </div>
         <div className={classes.coverSection}>

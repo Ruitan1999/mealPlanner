@@ -2,7 +2,7 @@ import { Button } from '@mui/material';
 import React from 'react';
 import Image from 'next/image';
 import meal from '../assets/goal2.png'
-import classes from './Card.module.css'
+import classes from '../assets/Card.module.css'
 
 
 

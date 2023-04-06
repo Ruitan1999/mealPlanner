@@ -6,6 +6,7 @@ import Cover from '@/Components/Cover'
 import Banner from '@/Components/Banner'
 import Goal from '@/Components/Goal'
 import MealPlanSection from '@/Components/MealPlanSection'
+import Footer from '@/Components/Footer'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function Home() {
       <Banner></Banner>
       <Goal></Goal>
       <MealPlanSection></MealPlanSection>
+      <Footer></Footer>
       </main>
     </>
   )

@@ -1,0 +1,27 @@
+.card {
+
+    padding-top: 40px;
+    max-width: 20vw;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.card h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.card img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card button{
+    margin-top: 40px;
+   
+}

@@ -10,6 +10,12 @@ import {
   TextField,
   Button,
 } from "@mui/material";
+import MealItem from "./MealItem";
+
+interface Recipe {
+  id: number;
+  // other properties
+}
 
 const Search = () => {
   const [timeFrame, setTimeFrame] = useState("");
@@ -17,7 +23,7 @@ const Search = () => {
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState([]);
   const [result, setResult] = useState(null);
-  const [recipes, setRecipes] = useState(null);
+  const [recipes, setRecipes] = useState<Recipe[]>([]); // Update the type of recipes to be an array of Recipe objects
 
   const handleExcludeChange = (event: { target: { value: any } }) => {
     const selectedOptions = event.target.value;
@@ -160,6 +166,7 @@ const Search = () => {
           type="submit"
           variant="contained"
           color="primary"
+          disabled={!timeFrame || !targetCalories || !diet}
           sx={{
             width: "1300px",
             height: "56px",
@@ -183,6 +190,9 @@ const Search = () => {
           Reset
         </Button>
       </form>
+      <div className={classes.items}>
+        <MealItem recipes={recipes}></MealItem>
+      </div>
     </>
   );
 };

@@ -16,12 +16,6 @@ const index = () => {
           including time frame, target calories, diet, and exclusions.
         </h4>
         <Search></Search>
-        <div className={classes.items}>
-          <MealItem></MealItem>
-          <MealItem></MealItem>
-          <MealItem></MealItem>
-          <MealItem></MealItem>
-        </div>
       </div>
     </div>
   );

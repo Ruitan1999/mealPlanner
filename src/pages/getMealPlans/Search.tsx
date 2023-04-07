@@ -12,9 +12,13 @@ import {
 } from "@mui/material";
 import MealItem from "./MealItem";
 
-interface Recipe {
+interface MyRecipe {
   id: number;
-
+  title: string;
+  servings: number;
+  readyInMinutes: number;
+  healthScore: number;
+  pricePerServing: number;
   // other properties
 }
 
@@ -24,7 +28,7 @@ const Search = () => {
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState([]);
   const [result, setResult] = useState(null);
-  const [recipes, setRecipes] = useState<Recipe[]>([]); // Update the type of recipes to be an array of Recipe objects
+  const [recipes, setRecipes] = useState<MyRecipe[]>([]); // Update the type of recipes to be an array of Recipe objects
 
   const handleExcludeChange = (event: { target: { value: any } }) => {
     const selectedOptions = event.target.value;

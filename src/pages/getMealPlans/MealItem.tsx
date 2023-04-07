@@ -2,10 +2,15 @@ import React, { ReactNode } from "react";
 import Image from "next/image";
 import classes from "../../styles/Card.module.css";
 import testImg from "../../assets/banner.png";
+import Link from "next/link";
 
 interface Recipe {
   id: number;
-
+  title: string;
+  servings: number;
+  readyInMinutes: number;
+  healthScore: number;
+  pricePerServing: number;
   // specify other properties in your recipe object
 }
 
@@ -19,31 +24,33 @@ const MealItem = ({ recipes }: MealItemProps) => {
       {recipes.map((recipe) => {
         return (
           <>
-            <h1 key={recipe.id}>{recipes.title}</h1>
+            <h1 key={recipe.id}>{recipe.title}</h1>
             <Image src={testImg} alt={"test"}></Image>
             <div className={classes.details}>
               <div className={classes.serving}>
                 <div>
                   <h3>Serving Size</h3>
-                  <h2>{recipes.servings}</h2>
+                  <h2>{recipe.servings}</h2>
                 </div>
                 <div>
                   <h3>Cooking Time</h3>
-                  <h2>{recipes.readyInMinutes}</h2>
+                  <h2>{recipe.readyInMinutes}</h2>
                 </div>
                 <div>
                   <h3>Health Score</h3>
-                  <h2>{recipes.healthScore}</h2>
+                  <h2>{recipe.healthScore}</h2>
                 </div>
               </div>
               <div className={classes.cost}>
                 <div>
                   <h3>Price Per Serving</h3>
-                  <h2>{recipes.pricePerServing}</h2>
+                  <h2>{recipe.pricePerServing}</h2>
                 </div>
               </div>
             </div>
-            <button>View Item</button>
+            <Link href={`/getMealPlans/${recipe.id}`}>
+              <button>View Item</button>
+            </Link>
           </>
         );
       })}

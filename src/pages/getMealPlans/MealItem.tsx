@@ -11,6 +11,7 @@ interface Recipe {
   readyInMinutes: number;
   healthScore: number;
   pricePerServing: number;
+  image: any;
   // specify other properties in your recipe object
 }
 
@@ -24,33 +25,35 @@ const MealItem = ({ recipes }: MealItemProps) => {
       {recipes.map((recipe) => {
         return (
           <>
-            <h1 key={recipe.id}>{recipe.title}</h1>
-            <Image src={testImg} alt={"test"}></Image>
-            <div className={classes.details}>
-              <div className={classes.serving}>
-                <div>
-                  <h3>Serving Size</h3>
-                  <h2>{recipe.servings}</h2>
+            <div key={recipe.id} className={classes.item}>
+              <h1>{recipe.title}</h1>
+              <img src={recipe.image} alt={recipe.title}></img>
+              <div className={classes.details}>
+                <div className={classes.serving}>
+                  <div>
+                    <h3>Serving Size</h3>
+                    <h2>{recipe.servings}</h2>
+                  </div>
+                  <div>
+                    <h3>Cooking Time</h3>
+                    <h2>{recipe.readyInMinutes} min</h2>
+                  </div>
+                  <div>
+                    <h3>Health Score</h3>
+                    <h2>{recipe.healthScore}</h2>
+                  </div>
                 </div>
-                <div>
-                  <h3>Cooking Time</h3>
-                  <h2>{recipe.readyInMinutes}</h2>
-                </div>
-                <div>
-                  <h3>Health Score</h3>
-                  <h2>{recipe.healthScore}</h2>
+                <div className={classes.cost}>
+                  <div>
+                    <h3>Price Per Serving</h3>
+                    <h2>${recipe.pricePerServing}</h2>
+                  </div>
                 </div>
               </div>
-              <div className={classes.cost}>
-                <div>
-                  <h3>Price Per Serving</h3>
-                  <h2>{recipe.pricePerServing}</h2>
-                </div>
-              </div>
+              <Link href={`/getMealPlans/${recipe.id}`}>
+                <button>View Item</button>
+              </Link>
             </div>
-            <Link href={`/getMealPlans/${recipe.id}`}>
-              <button>View Item</button>
-            </Link>
           </>
         );
       })}

@@ -8,6 +8,7 @@
   align-items: center;
   display: flex;
   margin-right: 4rem;
+  background-color: rgb(233, 233, 233);
 }
 
 .list {

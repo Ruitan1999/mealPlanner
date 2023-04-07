@@ -1,13 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Nunito } from "next/font/google";
 import About from "@/Components/About";
 import Cover from "@/Components/Cover";
 import Banner from "@/Components/Banner";
 import Goal from "@/Components/Goal";
 import MealPlanSection from "@/Components/MealPlanSection";
-import Footer from "@/Components/Footer";
-import NavBar from "@/Components/NavBar";
 
 const nunito = Nunito({ subsets: ["latin"] });
 

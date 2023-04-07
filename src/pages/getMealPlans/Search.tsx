@@ -55,7 +55,7 @@ const Search = () => {
       method: "GET",
       url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/mealplans/generate",
       params: {
-        timeFrame,
+        timeFrame: "week",
         targetCalories,
         diet,
         exclude,
@@ -76,7 +76,6 @@ const Search = () => {
         });
         const giantIds = ids.join(",");
         setResult(giantIds);
-
         // Reset form fields after successful form submission
         setTimeFrame("");
         setTargetCalories("");
@@ -94,11 +93,12 @@ const Search = () => {
     const axios = require("axios");
     if (result !== null) {
       setLoadingRecipes(true); // set loading to true for second API call
+
       const options = {
         method: "GET",
         url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/informationBulk",
         params: {
-          ids: "634010,668492,1697747,715569,641408,650147,634848,1697583,645706,658624,653251,645647,635446,32579,633352,664533,1516713,657011,635964,622598,657682",
+          ids: result,
         },
         headers: {
           "X-RapidAPI-Key":
@@ -138,20 +138,6 @@ const Search = () => {
   return (
     <>
       <form onSubmit={handleSubmit} className={classes.form}>
-        <FormControl fullWidth margin="normal">
-          <InputLabel htmlFor="timeFrame">Time Frame</InputLabel>
-          <Select
-            id="timeFrame"
-            name="timeFrame"
-            value={timeFrame}
-            label="Time Frame"
-            onChange={(e) => setTimeFrame(e.target.value)}
-          >
-            <MenuItem value="day">Day</MenuItem>
-            <MenuItem value="week">Week</MenuItem>
-          </Select>
-        </FormControl>
-
         <TextField
           fullWidth
           margin="normal"

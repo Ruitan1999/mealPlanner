@@ -14,6 +14,7 @@ import MealItem from "./MealItem";
 
 interface Recipe {
   id: number;
+
   // other properties
 }
 
@@ -190,7 +191,7 @@ const Search = () => {
           Reset
         </Button>
       </form>
-      <div className={classes.items}>
+      <div>
         <MealItem recipes={recipes}></MealItem>
       </div>
     </>

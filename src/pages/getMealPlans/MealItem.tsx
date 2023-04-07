@@ -1,10 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import classes from "../../styles/Card.module.css";
 import testImg from "../../assets/banner.png";
 
 interface Recipe {
   id: number;
+
   // specify other properties in your recipe object
 }
 
@@ -18,27 +19,27 @@ const MealItem = ({ recipes }: MealItemProps) => {
       {recipes.map((recipe) => {
         return (
           <>
-            <h1 key={recipe.id}>Test Item</h1>
+            <h1 key={recipe.id}>{recipes.title}</h1>
             <Image src={testImg} alt={"test"}></Image>
             <div className={classes.details}>
               <div className={classes.serving}>
                 <div>
                   <h3>Serving Size</h3>
-                  <h2>5</h2>
+                  <h2>{recipes.servings}</h2>
                 </div>
                 <div>
                   <h3>Cooking Time</h3>
-                  <h2>20min</h2>
+                  <h2>{recipes.readyInMinutes}</h2>
                 </div>
                 <div>
                   <h3>Health Score</h3>
-                  <h2>4</h2>
+                  <h2>{recipes.healthScore}</h2>
                 </div>
               </div>
               <div className={classes.cost}>
                 <div>
                   <h3>Price Per Serving</h3>
-                  <h2>$45</h2>
+                  <h2>{recipes.pricePerServing}</h2>
                 </div>
               </div>
             </div>

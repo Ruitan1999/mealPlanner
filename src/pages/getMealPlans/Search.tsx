@@ -41,20 +41,17 @@ const Search = () => {
     setExclude(selectedOptions);
   };
 
-  const resetHanlder = () => {
-    setTargetCalories("");
-    setDiet("");
-    setExclude([]);
-
-    // Clear data from localStorage
-    localStorage.removeItem("recipes");
-  };
-
   const fetchData = () => {
     const storedData = localStorage.getItem("recipes");
     if (storedData) {
       setRecipes(JSON.parse(storedData));
     }
+  };
+
+  const resetHanlder = () => {
+    setTargetCalories("");
+    setDiet("");
+    setExclude([]);
   };
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {

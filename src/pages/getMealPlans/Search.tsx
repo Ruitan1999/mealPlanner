@@ -103,7 +103,7 @@ const Search = () => {
         headers: {
           "X-RapidAPI-Key":
             "04d9070678msh5527fe2984c1037p11d8b0jsn33adb02c04ac",
-          "X-RapidAPI-Host":
+          "X-RapidAPI-Host":˝
             "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         },
       };
@@ -190,7 +190,7 @@ const Search = () => {
           type="submit"
           variant="contained"
           color="primary"
-          disabled={!timeFrame || !targetCalories}
+          disabled={!targetCalories}
           sx={{
             width: "1300px",
             height: "56px",

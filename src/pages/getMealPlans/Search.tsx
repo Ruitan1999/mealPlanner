@@ -22,11 +22,11 @@ interface MyRecipe {
   healthScore: number;
   pricePerServing: number;
   image: any;
+
   // other properties
 }
 
 const Search = () => {
-  const [timeFrame, setTimeFrame] = useState("");
   const [targetCalories, setTargetCalories] = useState("");
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState([]);
@@ -42,10 +42,19 @@ const Search = () => {
   };
 
   const resetHanlder = () => {
-    setTimeFrame("");
     setTargetCalories("");
     setDiet("");
     setExclude([]);
+
+    // Clear data from localStorage
+    localStorage.removeItem("recipes");
+  };
+
+  const fetchData = () => {
+    const storedData = localStorage.getItem("recipes");
+    if (storedData) {
+      setRecipes(JSON.parse(storedData));
+    }
   };
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {
@@ -77,7 +86,7 @@ const Search = () => {
         const giantIds = ids.join(",");
         setResult(giantIds);
         // Reset form fields after successful form submission
-        setTimeFrame("");
+
         setTargetCalories("");
         setDiet("");
         setExclude([]);
@@ -103,7 +112,7 @@ const Search = () => {
         headers: {
           "X-RapidAPI-Key":
             "04d9070678msh5527fe2984c1037p11d8b0jsn33adb02c04ac",
-          "X-RapidAPI-Host":˝
+          "X-RapidAPI-Host":
             "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
         },
       };
@@ -112,6 +121,8 @@ const Search = () => {
         .then(function (response: { data: React.SetStateAction<MyRecipe[]> }) {
           // setLoading(false); // Set loading to false when data is successfully fetched
           setRecipes(response.data);
+          // Store fetched data in localStorage
+          localStorage.setItem("recipes", JSON.stringify(response.data));
         })
         .catch(function (error: any) {
           // setLoading(false);
@@ -122,7 +133,7 @@ const Search = () => {
           setLoadingRecipes(false); // set loading to false after second API call is complete
         });
     }
-    console.log("nope");
+    fetchData(); // Call fetchData to retrieve data from localStorage
   }, [result]);
 
   // Render loading spinner while fetching data for both API calls

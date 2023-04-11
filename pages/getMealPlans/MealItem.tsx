@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 
 import classes from "../../styles/Card.module.css";
 
-import Link from "next/link";
 
 interface Recipe {
   id: number;
@@ -39,7 +38,7 @@ const MealItem = ({ recipes }: MealItemProps) => {
 
   return (
     <div className={classes.card}>
-      {recipes.map((recipe) => {
+        {recipes?.map((recipe) => { // Added nullish coalescing operator to handle undefined recipes prop
         return (
           <div key={recipe.id}  className={classes.header1}>
               <h1>{recipe.title}</h1>

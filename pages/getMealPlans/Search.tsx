@@ -3,8 +3,7 @@ import { useState } from "react";
 import Axios from "axios";
 import classes from "../../styles/getMealPlans.module.css";
 import { CircularProgress } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { setRecipess } from "./recipeReducer";
+
 
 
 
@@ -62,7 +61,7 @@ const Search = () => {
     setExclude([]);
   };
 
-  const dispatch = useDispatch();
+
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();

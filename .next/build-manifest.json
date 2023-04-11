@@ -1,34 +1,63 @@
 {
   "polyfillFiles": [
-    "static/chunks/polyfills.js"
+    "static/chunks/polyfills-c67a75d1b6f99dc8.js"
   ],
-  "devFiles": [
-    "static/chunks/react-refresh.js"
-  ],
-  "ampDevFiles": [
-    "static/chunks/webpack.js",
-    "static/chunks/amp.js"
-  ],
+  "devFiles": [],
+  "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/development/_buildManifest.js",
-    "static/development/_ssgManifest.js"
+    "static/ffgsuAaqK2tp7oTHPEfZI/_buildManifest.js",
+    "static/ffgsuAaqK2tp7oTHPEfZI/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/css/05200e56a71145c1.css",
+      "static/chunks/pages/index-cac30061eab53b4f.js"
+    ],
     "/_app": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_app.js"
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/css/0bd638c677e157be.css",
+      "static/chunks/pages/_app-59b85976931b6727.js"
     ],
     "/_error": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/_error.js"
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/chunks/pages/_error-54de1933a164a1ff.js"
     ],
     "/getMealPlans": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/getMealPlans.js"
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/chunks/78-363fcb9c83f96e1b.js",
+      "static/css/0625d84bd67c1434.css",
+      "static/chunks/pages/getMealPlans-6ac8acb9f5f4baad.js"
+    ],
+    "/getMealPlans/MealItem": [
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/css/3c36d7796fcd7b68.css",
+      "static/chunks/pages/getMealPlans/MealItem-e023db549c8eb512.js"
+    ],
+    "/getMealPlans/Search": [
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/chunks/78-363fcb9c83f96e1b.js",
+      "static/css/b44cfde5a9f57409.css",
+      "static/chunks/pages/getMealPlans/Search-4d2b57de52ce9e6d.js"
+    ],
+    "/getMealPlans/[mealItemId]": [
+      "static/chunks/webpack-87b3a303122f2f0d.js",
+      "static/chunks/framework-2c79e2a64abdb08b.js",
+      "static/chunks/main-0ecb9ccfcb6c9b24.js",
+      "static/chunks/pages/getMealPlans/[mealItemId]-881d5954077baab0.js"
     ]
   },
   "ampFirstPages": []

@@ -1,6 +1,10 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
+  "/getMealPlans/MealItem": "pages/getMealPlans/MealItem.js",
   "/_document": "pages/_document.js",
-  "/getMealPlans": "pages/getMealPlans.js"
+  "/_error": "pages/_error.js",
+  "/getMealPlans/Search": "pages/getMealPlans/Search.js",
+  "/getMealPlans/[mealItemId]": "pages/getMealPlans/[mealItemId].js",
+  "/getMealPlans": "pages/getMealPlans.js",
+  "/": "pages/index.js"
 }

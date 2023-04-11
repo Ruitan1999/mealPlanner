@@ -1,0 +1,23 @@
+.about {
+    background-color: white;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.about h1{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+
+}
+
+.about p{
+    font-size: 21px;
+    line-height: 180%;
+    font-family: 'Helvetica';
+    font-weight: 300;
+    font-style: italic;
+}

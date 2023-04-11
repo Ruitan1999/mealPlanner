@@ -15,6 +15,7 @@ import {
   MenuItem,
   TextField,
   Button,
+  
 } from "@mui/material";
 import MealItem from "./MealItem";
 
@@ -27,7 +28,8 @@ export interface MyRecipe {
   healthScore: number;
   pricePerServing: number;
   image: any;
-
+  sourceUrl: any;
+  summary: string;
   // other properties
 }
 

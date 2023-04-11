@@ -50,7 +50,7 @@ const MealItem = ({ recipes  })=>{
     };
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
         className: (_styles_Card_module_css__WEBPACK_IMPORTED_MODULE_2___default().card),
-        children: recipes.map((recipe)=>{
+        children: recipes?.map((recipe)=>{
             return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                 className: (_styles_Card_module_css__WEBPACK_IMPORTED_MODULE_2___default().header1),
                 children: [

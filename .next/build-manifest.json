@@ -34,6 +34,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/getMealPlans.js"
+    ],
+    "/getMealPlans/[mealItemId]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/getMealPlans/[mealItemId].js"
     ]
   },
   "ampFirstPages": []

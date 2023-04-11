@@ -9,6 +9,8 @@ import MealPlanSection from "@/Components/MealPlanSection";
 const nunito = Nunito({ subsets: ["latin"] });
 
 export default function Home() {
+
+  
   return (
     <>
       <Head>

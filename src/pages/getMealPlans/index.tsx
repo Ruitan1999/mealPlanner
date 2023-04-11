@@ -1,7 +1,7 @@
 import React from "react";
 import Search from "./Search";
 import classes from "./Index.module.css";
-import MealItem from "./MealItem";
+import { Provider } from 'react-redux';
 import Head from "next/head";
 
 const index = () => {

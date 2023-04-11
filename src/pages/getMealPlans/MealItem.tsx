@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import Image from "next/image";
+
 import classes from "../../styles/Card.module.css";
-import testImg from "../../assets/banner.png";
+
 import Link from "next/link";
 
 interface Recipe {

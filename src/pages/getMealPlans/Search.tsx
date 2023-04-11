@@ -3,6 +3,10 @@ import { useState } from "react";
 import Axios from "axios";
 import classes from "../../styles/getMealPlans.module.css";
 import { CircularProgress } from "@mui/material";
+import { useDispatch } from "react-redux";
+import { setRecipess } from "./recipeReducer";
+
+
 
 import {
   FormControl,
@@ -14,7 +18,8 @@ import {
 } from "@mui/material";
 import MealItem from "./MealItem";
 
-interface MyRecipe {
+
+export interface MyRecipe {
   id: number;
   title: string;
   servings: number;
@@ -27,6 +32,7 @@ interface MyRecipe {
 }
 
 const Search = () => {
+
   const [targetCalories, setTargetCalories] = useState("");
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState([]);
@@ -53,6 +59,8 @@ const Search = () => {
     setDiet("");
     setExclude([]);
   };
+
+  const dispatch = useDispatch();
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -118,6 +126,7 @@ const Search = () => {
         .then(function (response: { data: React.SetStateAction<MyRecipe[]> }) {
           // setLoading(false); // Set loading to false when data is successfully fetched
           setRecipes(response.data);
+          // dispatch(setRecipess(response.data)); // Dispatch the recipes data to Redux store using the action
           // Store fetched data in localStorage
           localStorage.setItem("recipes", JSON.stringify(response.data));
         })
@@ -131,7 +140,7 @@ const Search = () => {
         });
     }
     fetchData(); // Call fetchData to retrieve data from localStorage
-  }, [result]);
+  }, [result, dispatch]);
 
   // Render loading spinner while fetching data for both API calls
   if (loading || loadingRecipes) {
@@ -224,9 +233,14 @@ const Search = () => {
       </form>
       <div className={classes.items}>
         <MealItem recipes={recipes}></MealItem>
+
       </div>
     </>
   );
 };
 
 export default Search;
+function dispatch(arg0: void) {
+  throw new Error("Function not implemented.");
+}
+

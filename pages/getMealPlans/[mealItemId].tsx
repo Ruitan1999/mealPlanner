@@ -129,7 +129,11 @@ const MealItemId = () => {
         {selectedRecipe.diets?.map((item: any, index: number) => {
           return (
             <li key={index} className={classes.diets}>
-              {item}
+              {typeof item === "string" && item === "" ? (
+                <h3>None available</h3>
+              ) : (
+                <h3>{item.toUpperCase()}</h3>
+              )}
             </li>
           );
         })}
@@ -163,7 +167,6 @@ const MealItemId = () => {
         {selectedRecipe.tips.cooking?.map((item: any, index: number) => {
           return (
             <li key={index} className={classes.Cooking}>
-              {" "}
               {removeHtmlTags(item)}
             </li>
           );
@@ -174,8 +177,7 @@ const MealItemId = () => {
         {selectedRecipe.tips.green?.map((item: any, index: number) => {
           return (
             <li key={index} className={classes.Green}>
-              {" "}
-              {item}
+              {removeHtmlTags(item)}
             </li>
           );
         })}
@@ -185,7 +187,6 @@ const MealItemId = () => {
         {selectedRecipe.tips.health?.map((item: any, index: number) => {
           return (
             <li key={index} className={classes.Health}>
-              {" "}
               {removeHtmlTags(item)}
             </li>
           );

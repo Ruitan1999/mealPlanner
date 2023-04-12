@@ -4,11 +4,12 @@
   gap: 1rem;
   align-items: center;
   justify-content: center;
+
 }
 
 .items {
   display: flex;
-
+  margin-bottom: 40px;
   justify-content: center;
   align-items: center;
 }

@@ -162,14 +162,15 @@ const Search = () => {
         />
 
         <FormControl fullWidth margin="normal">
-          <InputLabel htmlFor="diet">Diet</InputLabel>
+          <InputLabel htmlFor="diet">Diet (Optional)</InputLabel>
           <Select
             id="diet"
             name="Diet"
             value={diet}
-            label="Diet"
+            label="Diet (Optional)"
             onChange={(e) => setDiet(e.target.value)}
           >
+            <MenuItem value="">None</MenuItem>
             <MenuItem value="vegetarian">Vegetarian</MenuItem>
             <MenuItem value="vegan">Vegan</MenuItem>
             <MenuItem value="kosher">Kosher</MenuItem>
@@ -179,14 +180,14 @@ const Search = () => {
         </FormControl>
 
         <FormControl fullWidth margin="normal">
-          <InputLabel htmlFor="exclude">Allergies</InputLabel>
+          <InputLabel htmlFor="exclude">Allergies (Optional)</InputLabel>
           <Select
             id="exclude"
             name="exclude"
             multiple
             value={exclude}
             onChange={handleExcludeChange}
-            label="Exclude"
+            label="Exclude (Optional)"
           >
             <MenuItem value="milk">Milk</MenuItem>
             <MenuItem value="egg">Egg</MenuItem>

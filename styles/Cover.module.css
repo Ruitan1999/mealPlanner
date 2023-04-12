@@ -18,6 +18,7 @@
 
 .writingSection h1 {
   font-size: 5rem;
+  width: 90vw;
 }
 
 .writingSection p {
@@ -35,6 +36,7 @@
 }
 
 .coverSection img {
+  width: 100vw;
   object-fit: contain;
 }
 
@@ -53,3 +55,42 @@
   stroke: rgb(33, 35, 33);
   stroke-width: 5px;
 }
+
+
+
+@media (max-width: 900px) {
+
+  .cover {
+ 
+    flex-direction: column-reverse;
+   
+  }
+
+
+  .writingSection h1 {
+    margin-top: 0rem;
+    width: 90vw;
+  }
+  
+  .writingSection p {
+
+    width: 90vw;
+ 
+  }
+
+  .curvyline {
+    display: none;
+  }
+  
+  .coverSection img {
+    width: 400px;
+    object-fit: contain;
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+  }
+  
+
+
+}
+
+

@@ -54,3 +54,27 @@
   transition: 300ms;
 }
 
+
+@media (max-width: 900px) {
+  .section {
+
+    margin-top: 5rem;
+
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  
+  }
+
+  
+  .section h3 {
+   
+    width: 90vw;
+
+  }
+  
+  .section h1 {
+    width: 80vw;
+  }
+  
+  
+}

@@ -93,3 +93,22 @@
     color: #161616;
 
 }
+
+
+
+@media (max-width: 900px) {
+    .goal {
+ 
+        flex-direction: column;
+      
+    }
+    
+    .goal1 {
+ 
+        flex-direction: column;
+      
+    }
+  
+    
+    
+  }

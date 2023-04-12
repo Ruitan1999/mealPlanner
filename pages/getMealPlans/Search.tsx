@@ -11,10 +11,8 @@ import {
   MenuItem,
   TextField,
   Button,
-  
 } from "@mui/material";
 import MealItem from "./MealItem";
-
 
 export interface MyRecipe {
   id: number;
@@ -31,9 +29,6 @@ export interface MyRecipe {
 }
 
 const Search = () => {
-
-  
-
   const [targetCalories, setTargetCalories] = useState("");
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState([]);
@@ -42,8 +37,6 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
   const [loadingRecipes, setLoadingRecipes] = useState(false); // Add loading state for second API call
   const [error, setError] = useState(null); // Add an error state
-
-  
 
   const handleExcludeChange = (event: { target: { value: any } }) => {
     const selectedOptions = event.target.value;
@@ -62,8 +55,6 @@ const Search = () => {
     setDiet("");
     setExclude([]);
   };
-
-
 
   const handleSubmit = async (event: { preventDefault: () => void }) => {
     event.preventDefault();
@@ -98,9 +89,6 @@ const Search = () => {
         setTargetCalories("");
         setDiet("");
         setExclude([]);
-
-        
-
       }
     } catch (error) {
       console.error(error);
@@ -108,7 +96,6 @@ const Search = () => {
       setTimeout(() => {
         setLoading(false); // set loading back to false after API call is complete
       }, 1000);
-     
     }
   };
 
@@ -242,7 +229,6 @@ const Search = () => {
       </form>
       <div className={classes.items}>
         <MealItem recipes={recipes}></MealItem>
-
       </div>
     </>
   );
@@ -252,4 +238,3 @@ export default Search;
 function dispatch(arg0: void) {
   throw new Error("Function not implemented.");
 }
-

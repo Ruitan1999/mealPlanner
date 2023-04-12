@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 54px;
-  line-height: 48px;
+
   /* identical to box height */
   margin-bottom: 3vh;
   text-align: center;
@@ -75,6 +75,11 @@
   .section h1 {
     width: 80vw;
   }
+
+  .section button {
+   color: #000;
+  }
+
   
   
 }

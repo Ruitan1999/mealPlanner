@@ -137,3 +137,24 @@
 .creditsText {
     margin-bottom: 40px;
 }
+
+
+@media (max-width: 900px) {
+    .recipe {
+        width: 90vw;
+        margin: 2rem;
+        margin-top: 0
+   
+    }
+    .snapshot {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .snapshot h2 {
+        margin-top: 0rem;
+    }
+  
+  }
+  

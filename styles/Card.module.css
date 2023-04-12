@@ -169,4 +169,9 @@
     margin-right: 1rem;
     margin-left: 1rem;
   }
+
+  .card button {
+   color: #000;
+  }
+
 }

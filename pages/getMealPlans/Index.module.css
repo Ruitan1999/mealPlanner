@@ -22,3 +22,14 @@
 margin-left: 2rem;
 margin-right: 2rem;
 }
+
+
+@media (max-width: 900px) {
+ 
+  .searchSection h1 {
+ 
+
+width: 90vw;
+  }
+  
+}

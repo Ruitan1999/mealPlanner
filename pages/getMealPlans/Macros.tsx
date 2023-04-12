@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Macros.module.css";
+import classes from "./mealitemid.module.css";
 
 const Macros = ({ macros }: any) => {
   return (

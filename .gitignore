@@ -2,3 +2,9 @@ node_modules
 .next/static/QdggO1Iey9GK6fUa_kd4U/_ssgManifest.js
 *.css
 *.pack
+*.json
+*.woff2
+*.png
+*.js
+.next/trace
+*.old

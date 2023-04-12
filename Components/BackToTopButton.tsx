@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import classes from "../styles/BackToTopButton.module.css";
+import classes from "../styles/About.module.css";
 
 const BackToTopButton: React.FC = () => {
   const [showButton, setShowButton] = useState(false);

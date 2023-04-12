@@ -42,7 +42,7 @@ const MealItemId = () => {
     const text = doc.body.textContent || "";
     return text;
   };
-
+  const pricePerServingInDollars = (selectedRecipe.pricePerServing / 100).toFixed(2);
 
   return (
     <div key={selectedRecipe.id} className={classes.recipe}>
@@ -67,7 +67,7 @@ const MealItemId = () => {
         </div>
         <div>
           <h2>Price Per Serving</h2>
-          <h3>$ {selectedRecipe.pricePerServing}</h3>
+          <h3>$ {pricePerServingInDollars}</h3>
         </div>
         <div>
           <h2>Health Score</h2>

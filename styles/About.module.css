@@ -22,3 +22,24 @@
     font-weight: 300;
     font-style: italic;
 }
+
+@media (max-width: 900px) {
+
+    .about {
+        margin-top: 5rem;
+        width: 100%;
+  
+    }
+
+    .about h1{
+        width: 90vw;
+        text-align: center;
+    }
+
+    
+    
+  
+  
+  }
+  
+  

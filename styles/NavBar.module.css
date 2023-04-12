@@ -48,3 +48,16 @@
   height: 55px;
   object-fit: contain;
 }
+
+
+@media (max-width: 900px) {
+  .mainLogo {
+    display: none;
+  }
+  .header {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+}
+

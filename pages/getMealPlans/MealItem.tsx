@@ -1,7 +1,8 @@
-import React, { ReactNode } from "react";
+import React, { useState } from "react";
 
 import classes from "../../styles/Card.module.css";
 
+import Link from "next/link";
 
 interface Recipe {
   id: number;
@@ -13,6 +14,7 @@ interface Recipe {
   image: any;
   sourceUrl: any;
   summary: string;
+  diets: any;
   // specify other properties in your recipe object
 }
 
@@ -21,40 +23,16 @@ interface MealItemProps {
 }
 
 const MealItem = ({ recipes }: MealItemProps) => {
-  // Function to remove HTML tags
-  const removeHtmlTags = (str: string): string => {
-    // Create a new DOMParser
-    const parser = new DOMParser();
-
-    // Parse the string into a Document object
-    const doc = parser.parseFromString(str, "text/html");
-
-    // Get the text content of the Document (without HTML tags)
-    const text = doc.body.textContent || "";
-
-    // Return the text content
-    return text;
-  };
 
   return (
     <div className={classes.card}>
-        {recipes?.map((recipe) => { // Added nullish coalescing operator to handle undefined recipes prop
+      {recipes?.map((recipe) => {
         return (
-          <div key={recipe.id}  className={classes.header1}>
-              <h1>{recipe.title}</h1>
-              <img src={recipe.image} alt={recipe.title}></img>
-           <div  className={classes.item}>
-           
-           <div className={classes.summary}>
-            <h3>Summary</h3>
-            <p>{removeHtmlTags(recipe.summary)}</p>
-            </div>
-            
-            {/* <Link href={`/getMealPlans/${recipe.id}`}>
-              <button>View Item</button>
-            </Link> */}
-            
-            </div>
+          <div key={recipe.id} className={classes.header1}>
+            <h1>{recipe.title}</h1>
+            <img src={recipe.image} alt={recipe.title}></img>
+            <div className={classes.item}></div>
+
             <div className={classes.details}>
               <div className={classes.serving}>
                 <div>
@@ -77,16 +55,11 @@ const MealItem = ({ recipes }: MealItemProps) => {
                 </div>
               </div>
             </div>
-            <a
-              className={classes.button2}
-              href={`${recipe.sourceUrl}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button>
-                <span>View Item</span>
-              </button>
-            </a>
+
+            
+            <Link href={`/getMealPlans/${recipe.id}`}>
+              <button>Learn More</button>
+            </Link>
           </div>
         );
       })}

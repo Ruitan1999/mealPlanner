@@ -5,6 +5,7 @@ import Cover from "../Components/Cover";
 import Banner from "../Components/Banner";
 import Goal from "../Components/Goal";
 import MealPlanSection from "../Components/MealPlanSection";
+import classes from './index.module.css'
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -19,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className={classes.cover}>
         <Cover></Cover>
         <About></About>
         <Banner></Banner>

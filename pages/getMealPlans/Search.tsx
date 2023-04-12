@@ -4,9 +4,6 @@ import Axios from "axios";
 import classes from "../../styles/getMealPlans.module.css";
 import { CircularProgress } from "@mui/material";
 
-
-
-
 import {
   FormControl,
   InputLabel,
@@ -29,6 +26,7 @@ export interface MyRecipe {
   image: any;
   sourceUrl: any;
   summary: string;
+  diets: any;
   // other properties
 }
 

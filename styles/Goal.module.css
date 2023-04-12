@@ -100,14 +100,34 @@
     .goal {
  
         flex-direction: column;
+        gap: 3rem;
       
     }
     
     .goal1 {
  
         flex-direction: column;
-      
+        gap: 3rem;
     }
+
+    .goal h1 {
+
+        width: 90vw;
+    }
+    
+
+    
+    
+    
+    .goal p {
+        width: 90vw;
+    
+    }
+    
+    .goal1 p {
+        width: 90vw;
+    }
+
   
     
     

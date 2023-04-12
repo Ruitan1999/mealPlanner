@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import styles from "../styles/BackToTopButton.module.css";
+import classes from "../styles/BackToTopButton.module.css";
 
 const BackToTopButton: React.FC = () => {
   const [showButton, setShowButton] = useState(false);
@@ -22,7 +22,7 @@ const BackToTopButton: React.FC = () => {
 
   return (
     <button
-      className={`${styles.backToTopButton} ${showButton ? styles.show : ""}`}
+      className={`${classes.backToTopButton} ${showButton ? classes.show : ""}`}
       onClick={handleButtonClick}
       aria-label="Back to Top"
     >

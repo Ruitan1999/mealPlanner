@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect, useState}from "react";
 import { useRouter } from "next/router";
 import classes from "./mealitemid.module.css";
+import Macros from "./Macros";
 
 const MealItemId = () => {
+  const [macroData, setMacroData] = useState([]);
+
   const router = useRouter();
 
   const handleBackButtonClick = () => {
@@ -19,22 +22,46 @@ const MealItemId = () => {
   };
 
   const recipess = getDataFromLocalStorage("recipes");
-
+  
   // Get the id from the URL query parameters and convert it to a string
   const { mealItemId } = router.query;
   const idString = mealItemId ? mealItemId.toString() : "";
 
+  useEffect(() => {
+    const axios = require("axios");
+    const options = {
+      method: 'GET',
+      url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${idString}/nutritionWidget.json`,
+      headers: {
+        "X-RapidAPI-Key":
+          "04d9070678msh5527fe2984c1037p11d8b0jsn33adb02c04ac",
+        "X-RapidAPI-Host":
+          "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+      },
+      };
+      axios.request(options).then(function (response: { data: any; }) {
+        setMacroData(response.data);
+      }).catch(function (error: any) {
+        console.error(error);
+      });
+  }, [router]);
+
+  console.log(macroData);
+  
   // Find the recipe with the matching id
   const selectedRecipe = recipess && recipess.find(
     (item: any) => item.id.toString() === idString
   );
 
+
+
+
+  
+
   // Check if selectedRecipe is not null before accessing its properties
   if (!selectedRecipe) {
     return <div>Loading...</div>; // Add a loading state or handle the case where selectedRecipe is null
   }
-
-  console.log(selectedRecipe);
 
   const removeHtmlTags = (str: string): string => {
     const parser = new DOMParser();
@@ -43,6 +70,7 @@ const MealItemId = () => {
     return text;
   };
   const pricePerServingInDollars = (selectedRecipe.pricePerServing / 100).toFixed(2);
+
 
   return (
     <div key={selectedRecipe.id} className={classes.recipe}>
@@ -82,6 +110,11 @@ const MealItemId = () => {
         <p className={classes.Summary}>
           {removeHtmlTags(selectedRecipe.summary)}
         </p>
+      </div>
+
+      <div>
+        <h1>Macro Nutrients</h1>
+        <Macros macros={macroData}></Macros>
       </div>
 
       <div>
@@ -147,3 +180,4 @@ const MealItemId = () => {
 };
 
 export default MealItemId;
+

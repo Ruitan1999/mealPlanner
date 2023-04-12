@@ -9,3 +9,6 @@ node_modules
 .next/trace
 *.old
 *.webp
+.next/BUILD_ID
+.next/cache/.tsbuildinfo
+*.html

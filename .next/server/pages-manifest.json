@@ -1,11 +1,11 @@
 {
-  "/_document": "pages/_document.js",
-  "/getMealPlans/MealItem": "pages/getMealPlans/MealItem.html",
-  "/getMealPlans/Search": "pages/getMealPlans/Search.html",
   "/_app": "pages/_app.js",
+  "/getMealPlans/Search": "pages/getMealPlans/Search.html",
+  "/_document": "pages/_document.js",
   "/getMealPlans": "pages/getMealPlans.html",
+  "/getMealPlans/MealItem": "pages/getMealPlans/MealItem.html",
   "/getMealPlans/[mealItemId]": "pages/getMealPlans/[mealItemId].html",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
+  "/": "pages/index.html",
   "/404": "pages/404.html"
 }

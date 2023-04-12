@@ -140,7 +140,7 @@ const MealItemId = () => {
 
        <div>
         <h1>Credit</h1>
-        <p>{selectedRecipe.creditsText}</p>
+        <p className={classes.creditsText}>{selectedRecipe.creditsText}</p>
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ const Macros = ({ macros }: any) => {
       </div>
       <div>
         <h3>protein</h3>
-        {macros && macros.protein && <p>{macros.protein}%</p>}
+        {macros && macros.protein && <p>{macros.protein}</p>}
       </div>
       <div>
         <h3>Percent Carbs</h3>

@@ -6,7 +6,10 @@ const Macros = ({ macros }: any) => {
     <div className={classes.macros}>
       <div>
         <h3>calories</h3>
+        {macros && macros.calories && (
         <p>{macros.calories}kcal</p>
+      )}
+    
       </div>
       <div>
         <h3>carbs</h3>
@@ -20,22 +23,32 @@ const Macros = ({ macros }: any) => {
         <h3>protein</h3>
         <p>{macros.protein}</p>
       </div>
-      {/* <div>
+      <div>
         <h3>Percent Carbs</h3>
+        {macros && macros.caloricBreakdown && macros.caloricBreakdown.percentCarbs && (
         <p>{macros.caloricBreakdown.percentCarbs}%</p>
+      )}
       </div>
       <div>
         <h3>Percent Fat</h3>
+        {macros && macros.caloricBreakdown && macros.caloricBreakdown.percentFat && (
         <p>{macros.caloricBreakdown.percentFat}%</p>
+      )}
       </div>
       <div>
         <h3>Percent Protein</h3>
+        {macros && macros.caloricBreakdown && macros.caloricBreakdown.percentProtein && (
         <p>{macros.caloricBreakdown.percentProtein}%</p>
+      )}
+    
       </div>
       <div>
         <h3>Weight Per Serving</h3>
+        {macros && macros.weightPerServing && macros.weightPerServing.amount && (
         <p>{macros.weightPerServing.amount}g</p>
-      </div> */}
+      )}
+    
+      </div>
     </div>
   );
 };

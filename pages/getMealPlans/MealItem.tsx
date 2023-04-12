@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import classes from "../../styles/Card.module.css";
-import PopupOverlay from "./PopupOverlay";
+
 import Link from "next/link";
 
 interface Recipe {
@@ -24,41 +24,14 @@ interface MealItemProps {
 
 const MealItem = ({ recipes }: MealItemProps) => {
 
-
-
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const handleOpenPopup = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
-  // const removeHtmlTags = (str: string): string => {
-  //   const parser = new DOMParser();
-  //   const doc = parser.parseFromString(str, "text/html");
-  //   const text = doc.body.textContent || "";
-  //   return text;
-  // };
-
   return (
     <div className={classes.card}>
       {recipes?.map((recipe) => {
-
         return (
           <div key={recipe.id} className={classes.header1}>
             <h1>{recipe.title}</h1>
             <img src={recipe.image} alt={recipe.title}></img>
-            <div className={classes.item}>
-              {/* <div className={classes.summary}>
-                <h3>Summary</h3>
-                <p>{removeHtmlTags(recipe.summary)}</p>
-              </div> */}
-
-  
-            </div>
+            <div className={classes.item}></div>
 
             <div className={classes.details}>
               <div className={classes.serving}>
@@ -82,15 +55,11 @@ const MealItem = ({ recipes }: MealItemProps) => {
                 </div>
               </div>
             </div>
-       
-              {/* <button  onClick={handleOpenPopup}>
-                <span>View Item</span>
-              </button>
 
-            {isPopupOpen && <PopupOverlay onClose={handleClosePopup} recipes={recipes} key={recipe.id}  recipeId={recipe.id} />} */}
+            
             <Link href={`/getMealPlans/${recipe.id}`}>
-                  <button>Learn More</button>
-                </Link>
+              <button>Learn More</button>
+            </Link>
           </div>
         );
       })}

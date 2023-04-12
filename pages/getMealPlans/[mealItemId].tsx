@@ -1,4 +1,4 @@
-import React, {useEffect, useState}from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import classes from "./mealitemid.module.css";
 import Macros from "./Macros";
@@ -22,7 +22,7 @@ const MealItemId = () => {
   };
 
   const recipess = getDataFromLocalStorage("recipes");
-  
+
   // Get the id from the URL query parameters and convert it to a string
   const { mealItemId } = router.query;
   const idString = mealItemId ? mealItemId.toString() : "";
@@ -30,33 +30,29 @@ const MealItemId = () => {
   useEffect(() => {
     const axios = require("axios");
     const options = {
-      method: 'GET',
+      method: "GET",
       url: `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/${idString}/nutritionWidget.json`,
       headers: {
-        "X-RapidAPI-Key":
-          "04d9070678msh5527fe2984c1037p11d8b0jsn33adb02c04ac",
+        "X-RapidAPI-Key": "04d9070678msh5527fe2984c1037p11d8b0jsn33adb02c04ac",
         "X-RapidAPI-Host":
           "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
       },
-      };
-      axios.request(options).then(function (response: { data: any; }) {
+    };
+    axios
+      .request(options)
+      .then(function (response: { data: any }) {
         setMacroData(response.data);
-      }).catch(function (error: any) {
+      })
+      .catch(function (error: any) {
         console.error(error);
       });
   }, [router]);
 
   console.log(macroData);
-  
+
   // Find the recipe with the matching id
-  const selectedRecipe = recipess && recipess.find(
-    (item: any) => item.id.toString() === idString
-  );
-
-
-
-
-  
+  const selectedRecipe =
+    recipess && recipess.find((item: any) => item.id.toString() === idString);
 
   // Check if selectedRecipe is not null before accessing its properties
   if (!selectedRecipe) {
@@ -69,22 +65,15 @@ const MealItemId = () => {
     const text = doc.body.textContent || "";
     return text;
   };
-  const pricePerServingInDollars = (selectedRecipe.pricePerServing / 100).toFixed(2);
-
+  const pricePerServingInDollars = (
+    selectedRecipe.pricePerServing / 100
+  ).toFixed(2);
 
   return (
     <div key={selectedRecipe.id} className={classes.recipe}>
       <button onClick={handleBackButtonClick}>Back</button>
       <h1>{selectedRecipe.title}</h1>
       <div className={classes.snapshot}>
-        <div>
-          <h2>Prep</h2>
-          <h3>{selectedRecipe.preparationMinutes} min</h3>
-        </div>
-        <div>
-          <h2>Cooking Time</h2>
-          <h3>{selectedRecipe.cookingMinutes} min</h3>
-        </div>
         <div>
           <h2>Ready In</h2>
           <h3>{selectedRecipe.readyInMinutes} min</h3>
@@ -100,6 +89,24 @@ const MealItemId = () => {
         <div>
           <h2>Health Score</h2>
           <h3>{selectedRecipe.healthScore}</h3>
+        </div>
+        <div>
+          <h2>Prep</h2>
+          {typeof selectedRecipe.preparationMinutes === "number" &&
+          selectedRecipe.preparationMinutes <= 1 ? (
+            <h3>None available</h3>
+          ) : (
+            <h3>{selectedRecipe.preparationMinutes} min</h3>
+          )}
+        </div>
+        <div>
+          <h2>Cooking Time</h2>
+          {typeof selectedRecipe.cookingMinutes === "number" &&
+          selectedRecipe.cookingMinutes <= 1 ? (
+            <h3>None available</h3>
+          ) : (
+            <h3>{selectedRecipe.cookingMinutes} min</h3>
+          )}
         </div>
       </div>
 
@@ -129,11 +136,11 @@ const MealItemId = () => {
       </div>
 
       <div>
-        <h1 >Ingredients</h1>
+        <h1>Ingredients</h1>
         {selectedRecipe.extendedIngredients?.map((item: any, index: number) => {
           return (
             <h1 key={index} className={classes.Ingredients}>
-             -  {item.original}
+              - {item.original}
             </h1>
           );
         })}
@@ -143,7 +150,7 @@ const MealItemId = () => {
         {selectedRecipe.analyzedInstructions[0].steps?.map(
           (item: any, index: number) => {
             return (
-              <li key={index}  className={classes.Instructions}>
+              <li key={index} className={classes.Instructions}>
                 Step {index}: {item.step}
               </li>
             );
@@ -154,24 +161,38 @@ const MealItemId = () => {
       <div>
         <h1>Cooking Tips</h1>
         {selectedRecipe.tips.cooking?.map((item: any, index: number) => {
-          return <li key={index} className={classes.Cooking}> {removeHtmlTags(item)}</li>;
+          return (
+            <li key={index} className={classes.Cooking}>
+              {" "}
+              {removeHtmlTags(item)}
+            </li>
+          );
         })}
-          </div>
-          <div>
+      </div>
+      <div>
         <h1>Green Tips</h1>
         {selectedRecipe.tips.green?.map((item: any, index: number) => {
-          return <li key={index} className={classes.Green}> {item}</li>;
+          return (
+            <li key={index} className={classes.Green}>
+              {" "}
+              {item}
+            </li>
+          );
         })}
-        </div>
-         <div>
+      </div>
+      <div>
         <h1>Health Tips</h1>
         {selectedRecipe.tips.health?.map((item: any, index: number) => {
-          return <li key={index} className={classes.Health}> {removeHtmlTags(item)}</li>;
+          return (
+            <li key={index} className={classes.Health}>
+              {" "}
+              {removeHtmlTags(item)}
+            </li>
+          );
         })}
-       </div>
-  
+      </div>
 
-       <div>
+      <div>
         <h1>Credit</h1>
         <p className={classes.creditsText}>{selectedRecipe.creditsText}</p>
       </div>
@@ -180,4 +201,3 @@ const MealItemId = () => {
 };
 
 export default MealItemId;
-

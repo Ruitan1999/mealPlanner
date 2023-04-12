@@ -27,6 +27,8 @@ const MealItem = ({ recipes }: MealItemProps) => {
   return (
     <div className={classes.card}>
       {recipes?.map((recipe) => {
+            const pricePerServingInDollars = (recipe.pricePerServing / 100).toFixed(2);
+
         return (
           <div key={recipe.id} className={classes.header1}>
             <h1>{recipe.title}</h1>
@@ -51,7 +53,7 @@ const MealItem = ({ recipes }: MealItemProps) => {
               <div className={classes.cost}>
                 <div>
                   <h3>Price Per Serving</h3>
-                  <h2>${recipe.pricePerServing}</h2>
+                   <h2>${pricePerServingInDollars}</h2> {/* Use the updated value */}
                 </div>
               </div>
             </div>

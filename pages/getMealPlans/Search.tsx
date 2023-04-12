@@ -32,6 +32,8 @@ export interface MyRecipe {
 
 const Search = () => {
 
+  
+
   const [targetCalories, setTargetCalories] = useState("");
   const [diet, setDiet] = useState("");
   const [exclude, setExclude] = useState([]);
@@ -40,6 +42,8 @@ const Search = () => {
   const [loading, setLoading] = useState(false);
   const [loadingRecipes, setLoadingRecipes] = useState(false); // Add loading state for second API call
   const [error, setError] = useState(null); // Add an error state
+
+  
 
   const handleExcludeChange = (event: { target: { value: any } }) => {
     const selectedOptions = event.target.value;
@@ -94,11 +98,17 @@ const Search = () => {
         setTargetCalories("");
         setDiet("");
         setExclude([]);
+
+        
+
       }
     } catch (error) {
       console.error(error);
     } finally {
-      setLoading(false); // set loading back to false after API call is complete
+      setTimeout(() => {
+        setLoading(false); // set loading back to false after API call is complete
+      }, 1000);
+     
     }
   };
 

@@ -48,8 +48,7 @@ const MealItemId = () => {
       });
   }, [router]);
 
-  console.log(macroData);
-
+  
   // Find the recipe with the matching id
   const selectedRecipe =
     recipess && recipess.find((item: any) => item.id.toString() === idString);

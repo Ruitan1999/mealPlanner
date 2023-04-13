@@ -48,8 +48,7 @@ const MealItemId = () => {
       });
   }, [router]);
 
-  console.log(macroData);
-
+  
   // Find the recipe with the matching id
   const selectedRecipe =
     recipess && recipess.find((item: any) => item.id.toString() === idString);
@@ -94,7 +93,7 @@ const MealItemId = () => {
           <h2>Prep</h2>
           {typeof selectedRecipe.preparationMinutes === "number" &&
           selectedRecipe.preparationMinutes <= 1 ? (
-            <h3>None available</h3>
+            <h3>None</h3>
           ) : (
             <h3>{selectedRecipe.preparationMinutes} min</h3>
           )}
@@ -103,7 +102,7 @@ const MealItemId = () => {
           <h2>Cooking Time</h2>
           {typeof selectedRecipe.cookingMinutes === "number" &&
           selectedRecipe.cookingMinutes <= 1 ? (
-            <h3>None available</h3>
+            <h3>None</h3>
           ) : (
             <h3>{selectedRecipe.cookingMinutes} min</h3>
           )}
@@ -130,7 +129,7 @@ const MealItemId = () => {
           return (
             <li key={index} className={classes.diets}>
               {typeof item === "string" && item === "" ? (
-                <h3>None available</h3>
+                <h3>None</h3>
               ) : (
                 <h3>{item.toUpperCase()}</h3>
               )}

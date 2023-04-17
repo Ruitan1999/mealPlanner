@@ -166,4 +166,11 @@
   .snapshot h2 {
     margin-top: 0rem;
   }
+
+  .macros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 3rem;
+    margin-top: 1rem;
+  }
 }
